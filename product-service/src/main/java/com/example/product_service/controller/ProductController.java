@@ -42,6 +42,7 @@ public class ProductController {
             old.setName(p.getName());
             old.setDescription(p.getDescription());
             old.setPrice(p.getPrice());
+            old.setCostPrice(p.getCostPrice());
             old.setQuantity(p.getQuantity());
             return ResponseEntity.ok(repo.save(old));
         }).orElse(ResponseEntity.notFound().build());

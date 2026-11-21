@@ -63,6 +63,13 @@ public class Product {
         this.updatedAt = updatedAt;
     }
 
+    // Gia nhap phuc vu tinh chi phi va loi nhuan.
+    @Column(name = "cost_price", precision = 10, scale = 2)
+    private BigDecimal costPrice;
+
+    public BigDecimal getCostPrice() { return costPrice; }
+    public void setCostPrice(BigDecimal costPrice) { this.costPrice = costPrice; }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
